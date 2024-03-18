@@ -1,0 +1,15 @@
+spring:
+  mail:
+    enabled: true
+    host: ${MAIL_HOST:smtp.gmail.com}
+    port: ${MAIL_PORT:587}
+    username: ${MAIL_USERNAME:luizfernandesoliveiraff@gmail.com}
+    password: ${MAIL_PASSWORD:sknfztlbdmqmippu}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+    test-connection: false
