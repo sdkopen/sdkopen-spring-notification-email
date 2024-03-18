@@ -7,11 +7,7 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class NotificationCreation {
 
-  public void execute(final Input input) {
+  public void execute(final Input input) {}
 
-  }
-
-  public static class Input {
-
-  }
+  public static class Input {}
 }

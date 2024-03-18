@@ -13,9 +13,7 @@ public class NotificationCreationEmailOption implements NotificationCreationOpti
   private String enabled;
 
   @Override
-  public void execute(NotificationCreation.Input input) {
-
-  }
+  public void execute(NotificationCreation.Input input) {}
 
   @Override
   public boolean canApply(NotificationType type) {
