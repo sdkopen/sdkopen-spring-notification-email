@@ -26,7 +26,6 @@ public class EmailConfiguration {
     JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
     mailSender.setHost(host);
     mailSender.setPort(Integer.parseInt(port));
-
     mailSender.setUsername(username);
     mailSender.setPassword(password);
 

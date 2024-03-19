@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 public class NotificationCreationEmailOption implements NotificationCreationOption {
   private final JavaMailSender javaMailSender;
 
-  @Value("${spring.notifcation.email.enabled}")
+  @Value("${spring.notification.email.enabled}")
   private String enabled;
 
   @Override
