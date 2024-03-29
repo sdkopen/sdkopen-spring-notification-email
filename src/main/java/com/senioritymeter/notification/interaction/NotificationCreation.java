@@ -1,8 +1,8 @@
-package com.opensourcelibrary.notification.interaction;
+package com.senioritymeter.notification.interaction;
 
-import com.opensourcelibrary.notification.enumeration.NotificationType;
-import com.opensourcelibrary.notification.exception.NotificationException;
-import com.opensourcelibrary.notification.interaction.creationoptions.NotificationCreationOption;
+import com.senioritymeter.notification.enumeration.NotificationType;
+import com.senioritymeter.notification.exception.NotificationException;
+import com.senioritymeter.notification.interaction.creationoptions.NotificationCreationOption;
 import java.util.List;
 import lombok.Builder;
 import lombok.Data;

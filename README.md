@@ -30,11 +30,11 @@ ___
 spring:
   notification:
     email:
-      enabled: true
-      host: smtp.gmail.com
-      port: 587
-      username: username
-      password: password
+      enabled: ${NOTIFICATION_EMAIL_ENABLED:true}
+      host: ${NOTIFICATION_EMAIL_HOST:smtp.gmail.com}
+      port: ${NOTIFICATION_EMAIL_PORT:587}
+      username: ${NOTIFICATION_EMAIL_USERNAME:username}
+      password: ${NOTIFICATION_EMAIL_PASSWORD:password}
 ```
 
 ___

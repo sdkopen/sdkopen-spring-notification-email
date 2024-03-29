@@ -1,7 +1,7 @@
-package com.opensourcelibrary.notification.interaction.creationoptions;
+package com.senioritymeter.notification.interaction.creationoptions;
 
-import com.opensourcelibrary.notification.enumeration.NotificationType;
-import com.opensourcelibrary.notification.interaction.NotificationCreation;
+import com.senioritymeter.notification.enumeration.NotificationType;
+import com.senioritymeter.notification.interaction.NotificationCreation;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.SimpleMailMessage;

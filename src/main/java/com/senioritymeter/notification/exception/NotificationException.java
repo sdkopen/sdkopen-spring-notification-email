@@ -1,4 +1,4 @@
-package com.opensourcelibrary.notification.exception;
+package com.senioritymeter.notification.exception;
 
 public class NotificationException extends RuntimeException {
 
