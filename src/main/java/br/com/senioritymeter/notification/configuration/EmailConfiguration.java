@@ -1,4 +1,4 @@
-package com.senioritymeter.notification.configuration;
+package br.com.senioritymeter.notification.configuration;
 
 import java.util.Properties;
 import org.springframework.beans.factory.annotation.Value;
