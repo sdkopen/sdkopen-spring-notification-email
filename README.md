@@ -9,7 +9,21 @@ This library is a simple notification library for Spring Boot applications. It p
 ___
 
 ### How to use
-#### 1. Add the following dependency and repository to your `pom.xml` file:
+#### 1. Add the following parent to your `pom.xml` file:
+
+```xml
+<parent>
+    <groupId>br.com.senioritymeter</groupId>
+    <artifactId>parent</artifactId>
+    <version>1.0.0</version>
+</parent>
+```
+
+#### 2. add scanBasePackages to your SpringBootApplication
+```java
+@SpringBootApplication(scanBasePackages = {"br.com.senioritymeter", "your.package.name.here"})
+```
+#### 3. Add the following dependency to your `pom.xml` file:
 
 ```xml
 <dependencies>
@@ -22,7 +36,7 @@ ___
 ```
 ___
 
-#### 2. Add the following properties to your `application.yaml` file:
+#### 4. Add the following properties to your `application.yaml` file:
 
 ##### a - Configuration for Email notification:
     
@@ -39,7 +53,7 @@ spring:
 
 ___
 
-#### 3. Use the `NotificationCreation` to send notifications:
+#### 5. Use the `NotificationCreation` to send notifications:
 
 Inject the `NotificationCreation` bean in your class and use it to send notifications.
 ```java
