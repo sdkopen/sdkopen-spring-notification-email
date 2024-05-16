@@ -18,11 +18,14 @@ ___
     <version>1.0.0</version>
 </parent>
 ```
+___
 
 #### 2. add scanBasePackages to your SpringBootApplication
 ```java
 @SpringBootApplication(scanBasePackages = {"br.com.senioritymeter", "your.package.name.here"})
 ```
+___
+
 #### 3. Add the following dependency to your `pom.xml` file:
 
 ```xml
