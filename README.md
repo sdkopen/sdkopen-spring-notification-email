@@ -4,7 +4,7 @@
 ## Spring Notification
 
 ### Description
-This library is a simple notification library for Spring Boot applications. It provides a simple way to send notifications to users.
+This is a simple notification SDK for Spring Boot applications. It provides a simple way to send notifications to users.
 
 ___
 
@@ -15,7 +15,7 @@ ___
 <parent>
     <groupId>br.com.senioritymeter</groupId>
     <artifactId>parent</artifactId>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 </parent>
 ```
 ___
@@ -33,7 +33,7 @@ ___
     <dependency>
         <groupId>br.com.senioritymeter</groupId>
         <artifactId>notification</artifactId>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
     </dependency>
 </dependencies>
 ```
