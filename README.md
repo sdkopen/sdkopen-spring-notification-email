@@ -66,7 +66,7 @@ private final NotifierEmail notifierEmail;
 Prepare your payload and call the `execute` method of the `NotifierEmail` bean. Example:
 ```java
 final var input =
-    NotifierEmail.Input.Email.builder()
+    NotifierEmail.Input.builder()
         .content("Test")
         .fromEmail("luizfernandesoliveiraoficial@gmail.com")
         .subject("Portfolio Developer - Email Confirmation")
