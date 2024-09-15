@@ -1,4 +1,4 @@
-package br.com.senioritymeter.notification.configuration;
+package br.com.sdkopen.notificationemail.infrastructure.configuration;
 
 import java.util.Properties;
 import org.springframework.beans.factory.annotation.Value;
@@ -9,16 +9,16 @@ import org.springframework.mail.javamail.JavaMailSenderImpl;
 
 @Configuration
 public class EmailConfiguration {
-  @Value("${spring.notification.email.host}")
+  @Value("${sdkopen.notification.email.host}")
   private String host;
 
-  @Value("${spring.notification.email.port}")
+  @Value("${sdkopen.notification.email.port}")
   private String port;
 
-  @Value("${spring.notification.email.username}")
+  @Value("${sdkopen.notification.email.username}")
   private String username;
 
-  @Value("${spring.notification.email.password}")
+  @Value("${sdkopen.notification.email.password}")
   private String password;
 
   @Bean

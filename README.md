@@ -1,10 +1,10 @@
-<img src="https://github.com/SeniorityMeter/spring-sm-starter-bom/assets/36059306/ebfcb364-caea-48eb-972a-2d1ae63f4cdb" alt="logo" width="100"/>
+<img src="https://github.com/user-attachments/assets/801ecb0c-455c-41a8-bb52-15d4318f2e78" alt="logo" width="100" style="border-radius: 50%;" />
 
-# Seniority Meter
-## Spring Notification
+# SDK Open
+## Spring Notification Email
 
 ### Description
-This is a simple notification SDK for Spring Boot applications. It provides a simple way to send notifications to users.
+This is a simple notification email SDK for Spring Boot applications.
 
 ___
 
@@ -13,16 +13,16 @@ ___
 
 ```xml
 <parent>
-    <groupId>br.com.senioritymeter</groupId>
+    <groupId>br.com.sdkopen</groupId>
     <artifactId>parent</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.0</version>
 </parent>
 ```
 ___
 
 #### 2. add scanBasePackages to your SpringBootApplication
 ```java
-@SpringBootApplication(scanBasePackages = {"br.com.senioritymeter", "your.package.name.here"})
+@SpringBootApplication(scanBasePackages = {"br.com.sdkopen", "your.package.name.here"})
 ```
 ___
 
@@ -31,9 +31,9 @@ ___
 ```xml
 <dependencies>
     <dependency>
-        <groupId>br.com.senioritymeter</groupId>
-        <artifactId>notification</artifactId>
-        <version>1.0.1</version>
+        <groupId>br.com.sdkopen</groupId>
+        <artifactId>notification-email</artifactId>
+        <version>1.0.0</version>
     </dependency>
 </dependencies>
 ```
@@ -44,7 +44,7 @@ ___
 ##### a - Configuration for Email notification:
     
 ```yaml
-spring:
+sdkopen:
   notification:
     email:
       enabled: ${NOTIFICATION_EMAIL_ENABLED:true}
@@ -56,26 +56,22 @@ spring:
 
 ___
 
-#### 5. Use the `NotificationCreation` to send notifications:
+#### 5. Use the `NotifierEmail` to send notifications:
 
-Inject the `NotificationCreation` bean in your class and use it to send notifications.
+Inject the `NotifierEmail` bean in your class and use it to send notifications.
 ```java
-private final NotificationCreation notificationCreation;
+private final NotifierEmail notifierEmail;
 ```
 
-Prepare your payload and call the `execute` method of the `NotificationCreation` bean. Example:
+Prepare your payload and call the `execute` method of the `NotifierEmail` bean. Example:
 ```java
 final var input =
-    NotificationCreation.Input.builder()
-        .email(
-            NotificationCreation.Input.Email.builder()
-                .content("Test")
-                .fromEmail("portfoliodeveloper@gmail.com")
-                .subject("Portfolio Developer - Email Confirmation")
-                .toEmails(List.of("luizfernandesoliveiraoficial@gmail.com"))
-                .build())
-        .type(NotificationType.EMAIL)
+    NotifierEmail.Input.Email.builder()
+        .content("Test")
+        .fromEmail("luizfernandesoliveiraoficial@gmail.com")
+        .subject("Portfolio Developer - Email Confirmation")
+        .toEmails(List.of("you@gmail.com"))
         .build();
 
-notificationCreation.execute(input);
+notifierEmail.execute(input);
 ```
